@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pranav Puranik</title>
+  <meta name="description" content="Pranav Puranik: computer science at the University of Maryland, robot learning research, quant, and violin in two traditions.">
+  <meta name="theme-color" content="#070504">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Tiro+Devanagari+Hindi&display=swap">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="is-gated">
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <header class="bar">
+    <button class="mark" type="button" data-go="hero">Pranav Puranik</button>
+    <div class="bar-r">
+      <button class="pill" id="notesBtn" type="button"><span class="long">Program notes</span><span class="short">Notes</span></button>
+      <button class="pill sound" id="soundBtn" type="button" aria-pressed="false">
+        <span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="sound-lbl">Sound off</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="index" aria-label="Chapters">
+    <ol id="indexList"></ol>
+  </nav>
+
+  <div class="raga" aria-live="polite">
+    <span class="raga-dev" id="ragaDev">आलाप</span>
+    <span class="raga-tr"><span id="ragaTr">ālāp</span> · Raga Yaman</span>
+  </div>
+
+  <div class="cue" id="cue" aria-hidden="true">
+    <span class="cue-bow"></span>
+    <span>Scroll to draw the bow</span>
+  </div>
+
+  <main id="track" aria-label="The story"></main>
+
+  <div id="panels">
+    <article class="panel panel-hero" data-key="hero" data-side="left">
+      <p class="eyebrow"><span class="num">I</span>The scroll</p>
+      <h1 class="name"><span class="split">Pranav</span> <span class="split">Puranik</span></h1>
+      <p class="lede">I study computer science at the University of Maryland. I do robot learning research, I build trading systems, and I play the violin in two traditions.</p>
+      <ul class="facts compact">
+        <li><span class="k">Based in</span><span>College Park, Maryland</span></li>
+        <li><span class="k">Class of</span><span>2029</span></li>
+      </ul>
+    </article>
+
+    <article class="panel" data-key="pegs" data-side="right">
+      <p class="eyebrow"><span class="num">II</span>The pegs</p>
+      <h2 class="title">Where I was tuned</h2>
+      <p class="lede">Four pegs set a violin's pitch. Turn one a few degrees and the whole string changes.</p>
+      <ul class="facts">
+        <li><span class="k">Home</span><span>Monroe Township, New Jersey.</span></li>
+        <li><span class="k">School</span><span>Monroe Township High School, class of 2025.</span></li>
+        <li><span class="k">Family</span><span>My parents. My dad sends me AI articles and gives me notes on what I build.</span></li>
+        <li><span class="k">Music</span><span>Hindustani and Western classical violin, and guidance from a professional sitarist.</span></li>
+      </ul>
+    </article>
+
+    <article class="panel" data-key="nut" data-side="left">
+      <p class="eyebrow"><span class="num">III</span>The nut</p>
+      <h2 class="title">Where the strings start</h2>
+      <p class="lede">The nut is the small ridge where the strings leave the pegbox and begin to sound. I started working before I started college.</p>
+      <ul class="facts">
+        <li><span class="k">2024</span><span><b>Kulicke &amp; Soffa.</b> Ball-bonding intern. I ran experiments on semiconductor bonding machines, wrote bonding programs in their CAD software, and measured bonds under a microscope.</span></li>
+        <li><span class="k">2025</span><span><b>HealthSutra Analytics.</b> Startup engineer, reporting to the founders. I built the platform medical advisors used to check AI-generated health insights, and a patient portal for the first partner hospitals.</span></li>
+      </ul>
+    </article>
+
+    <article class="panel" data-key="fingerboard" data-side="right">
+      <p class="eyebrow"><span class="num">IV</span>The fingerboard</p>
+      <h2 class="title">No frets</h2>
+      <p class="lede">A violin has no frets, so you find each note by ear and correct it when you miss. Beginners stick tape on the fingerboard until their hand knows the way.</p>
+      <ul class="facts">
+        <li><span class="k">2025–29</span><span><b>University of Maryland, College Park.</b> B.S. Computer Science, machine learning track. Presidential Scholarship.</span></li>
+        <li><span class="k">Tapes</span><span class="tapes"><i>Algorithms</i><i>Programming Languages</i><i>Probability &amp; Statistics</i><i>Linear Algebra</i></span></li>
+      </ul>
+    </article>
+
+    <article class="panel" data-key="g" data-side="right">
+      <p class="eyebrow"><span class="num">V</span>G string <span class="hz">196.00 Hz</span></p>
+      <h2 class="title">Robots that learn from a few examples</h2>
+      <p class="lede">Since January 2026 I've been a research assistant in the 3D Computer Vision Lab at Maryland, working with Daniel Ekpo. We ask how far a robot can get on the few demonstrations a university lab can actually collect.</p>
+      <ul class="facts">
+        <li><span class="k">Data</span><span>I teleoperated 50 to 100 demonstrations per task with a Quest headset, across five manipulation tasks.</span></li>
+        <li><span class="k">Result</span><span>I got the lab's improved P3-PO to its first consistent task completions, after finding a config whose camera calibration and start pose didn't match the real robot.</span></li>
+        <li><span class="k">Paper</span><span>Co-author on a paper under review at a major computer vision conference.</span></li>
+      </ul>
+      <figure class="viz viz-points" aria-hidden="true"><svg viewBox="0 0 320 90" id="vizPoints"></svg><figcaption>tracked points, the input P3-PO learns from</figcaption></figure>
+    </article>
+
+    <article class="panel" data-key="d" data-side="right">
+      <p class="eyebrow"><span class="num">VI</span>D string <span class="hz">293.66 Hz</span></p>
+      <h2 class="title">Trading systems that balance to the cent</h2>
+      <p class="lede">I'm a quantitative analyst on the quant team at Apex Fund, a student-run investment fund, and I build trading infrastructure of my own.</p>
+      <ul class="facts">
+        <li><span class="k">Apex</span><span>Replicated Bilello and Gayed's 2014 beta rotation study on 87 years of data, within 0.2%. Now extending it across 48 industries with a team of four.</span></li>
+        <li><span class="k">CarryBot</span><span>A bitcoin funding-rate carry bot across Kalshi and Alpaca, which I designed and built with Claude Code. Its ledger reconciles with both venues to the cent. I ran it live with $50 to prove execution, measured the edge at about 2% a year over Treasury bills, and shut it down.</span></li>
+        <li><span class="k">Harness</span><span>A platform for running many trading strategies side by side on paper accounts.</span></li>
+      </ul>
+      <figure class="viz viz-ledger" aria-hidden="true">
+        <div class="ledger">
+          <div><span>Balances</span><b id="ledA">50.0000</b></div>
+          <div><span>Flows</span><b id="ledB">50.0000</b></div>
+          <div class="diff"><span>Difference</span><b>0.0000</b></div>
+        </div>
+      </figure>
+    </article>
+
+    <article class="panel" data-key="a" data-side="left">
+      <p class="eyebrow"><span class="num">VII</span>A string <span class="hz">440.00 Hz</span></p>
+      <h2 class="title">Liquid</h2>
+      <p class="lede">I founded Liquid, a prepaid ordering app for local restaurants in College Park. You load a wallet once, order ahead, and pay from your balance. Restaurants get cash up front and regulars who come back.</p>
+      <ul class="facts">
+        <li><span class="k">Live</span><span>iPhone app, merchant portal and admin console, with payouts through Stripe.</span></li>
+        <li><span class="k">Why A</span><span>An orchestra tunes to A. This is the one I own.</span></li>
+      </ul>
+      <p class="aside"><em>Your local spots, a little cheaper.</em> <a href="https://liquidwallet.co" target="_blank" rel="noopener">liquidwallet.co</a></p>
+    </article>
+
+    <article class="panel" data-key="e" data-side="left">
+      <p class="eyebrow"><span class="num">VIII</span>E string <span class="hz">659.25 Hz</span></p>
+      <h2 class="title">Two traditions, four strings</h2>
+      <p class="lede">I play Hindustani classical and Western classical violin, and I've posted my recitals since 2020. The music on this page follows a Hindustani performance. It opens with a slow alap, finds a pulse, brings in the tabla, and ends fast.</p>
+      <figure class="viz viz-wave" aria-hidden="true"><canvas id="vizWave" width="640" height="120"></canvas></figure>
+      <p class="aside"><a href="https://www.youtube.com/@pranavpuranik3621" target="_blank" rel="noopener">Recitals on YouTube</a></p>
+    </article>
+
+    <article class="panel" data-key="bridge" data-side="left">
+      <p class="eyebrow"><span class="num">IX</span>The bridge</p>
+      <h2 class="title">Passing it on</h2>
+      <p class="lede">The bridge carries the strings' vibration into the body. Without it the violin barely makes a sound. In summer 2026 I was a program assistant in San Jose for 25 high school students in a hardware and design program, taught by engineers from one of the world's largest consumer technology companies.</p>
+      <ul class="facts">
+        <li><span class="k">Showcase</span><span>One team's build stalled right before the final showcase. I spent several days with them tracing power, wiring, pins and firmware, and they demoed it working for a senior hardware executive.</span></li>
+        <li><span class="k">Evenings</span><span>I also ran residential life: housing, evenings, and trips around the Bay Area.</span></li>
+      </ul>
+    </article>
+
+    <article class="panel" data-key="fholes" data-side="left">
+      <p class="eyebrow"><span class="num">X</span>The f-holes</p>
+      <h2 class="title">Where the sound gets out</h2>
+      <p class="lede">Everything a violin plays leaves through these two openings. Keep scrolling and follow it back in.</p>
+    </article>
+
+    <article class="panel panel-caption" data-key="dive" data-side="center">
+      <p class="eyebrow">Through the lower eye of the f-hole</p>
+    </article>
+
+    <article class="panel" data-key="soundpost" data-side="left">
+      <p class="eyebrow"><span class="num">XI</span>The sound post</p>
+      <h2 class="title"><em>L'âme</em></h2>
+      <p class="lede">Inside, a spruce post six millimeters wide stands between the top and the back. Nothing glues it in. Pressure holds it. Move it a millimeter and the whole voice changes. The French call it <em>l'âme</em> and the Italians call it <em>anima</em>: the soul.</p>
+      <p class="lede">Mine is the people. My parents, my mentors in the lab and in music, my roommates, and the friends I play volleyball with.</p>
+      <p class="aside">This site runs on anime.js. <em>Anima</em>, again.</p>
+    </article>
+
+    <article class="panel" data-key="bassbar" data-side="right">
+      <p class="eyebrow"><span class="num">XII</span>The bass bar</p>
+      <h2 class="title">What keeps it steady</h2>
+      <p class="lede">Under the low strings runs the bass bar, a strip of spruce that keeps the top from caving in under the tension. For me that's volleyball: pickup games, grass courts, and an intramural fours team.</p>
+      <p class="aside">The label below is how old makers signed their work. This one is mine.</p>
+    </article>
+
+    <article class="panel panel-caption" data-key="exit" data-side="center">
+      <p class="eyebrow">Out through the bass-side f-hole</p>
+    </article>
+
+    <article class="panel" data-key="tailpiece" data-side="right">
+      <p class="eyebrow"><span class="num">XIII</span>The tailpiece</p>
+      <h2 class="title">What's next</h2>
+      <p class="lede">The tailpiece anchors every string, and the fine tuners make the last small adjustments.</p>
+      <ul class="facts">
+        <li><span class="k">Summer 2027</span><span>Looking for an internship at a physical AI or quant startup.</span></li>
+        <li><span class="k">Dec 15</span><span>Presenting our lead-lag research at Apex Fund.</span></li>
+        <li><span class="k">In the lab</span><span>Starting a 3D scene reconstruction project I'm co-leading.</span></li>
+      </ul>
+    </article>
+
+    <article class="panel panel-finale" data-key="finale" data-side="left">
+      <p class="eyebrow"><span class="num">XIV</span>Your turn</p>
+      <h2 class="title">Play it</h2>
+      <p class="lede"><span class="only-fine">Sweep the cursor across the strings, or press A, S, D and F.</span><span class="only-touch">Swipe across the strings to play them.</span></p>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/pranav-puranik-umd" target="_blank" rel="noopener"><span>LinkedIn</span><i>pranav-puranik-umd</i></a></li>
+        <li><a href="https://github.com/PranavThe" target="_blank" rel="noopener"><span>GitHub</span><i>PranavThe</i></a></li>
+        <li><a href="https://www.youtube.com/@pranavpuranik3621" target="_blank" rel="noopener"><span>YouTube</span><i>Recitals</i></a></li>
+        <li><button type="button" data-open-notes><span>Program notes</span><i>Everything on one page</i></button></li>
+      </ul>
+      <p class="credits">Violin samples from the Musyng Kite soundfont (CC BY-SA 3.0). The instrument, tanpura and tabla are built in code.</p>
+    </article>
+  </div>
+
+  <section id="gate" aria-label="Welcome">
+    <svg class="gate-strings" id="gateStrings" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="gate-inner">
+      <p class="gate-hz" id="gateHz">A · 440.00 Hz</p>
+      <h1 class="gate-name"><span class="split">Pranav</span> <span class="split">Puranik</span></h1>
+      <p class="gate-sub">A violin, from the scroll to the end button. Best with sound.</p>
+      <div class="gate-actions" id="gateActions">
+        <button type="button" class="btn-primary" id="beginSound" disabled>Begin with sound</button>
+        <button type="button" class="btn-quiet" id="beginSilent" disabled>Enter in silence</button>
+      </div>
+      <p class="gate-status" id="gateStatus"><span class="gate-progress"><i id="gateProgress"></i></span><span id="gateStatusText">Preparing the instrument</span></p>
+    </div>
+  </section>
+
+  <section id="notes" hidden aria-label="Program notes">
+    <div class="notes-inner">
+      <header class="notes-head">
+        <p class="eyebrow">Program notes</p>
+        <h2>Pranav Puranik</h2>
+        <p>Computer science at the University of Maryland, class of 2029. Robot learning research, quant, and violin.</p>
+        <button type="button" class="pill notes-close" id="notesClose">Close</button>
+      </header>
+      <div class="notes-grid">
+        <section>
+          <h3>Now</h3>
+          <dl>
+            <dt>Research assistant <span>Jan 2026 –</span></dt><dd>3D Computer Vision Lab, University of Maryland. Robot learning from small demonstration sets, building on P3-PO. Co-author on a paper under review.</dd>
+            <dt>Quantitative analyst <span>Oct 2026 –</span></dt><dd>Apex Fund, a student-run investment fund. Beta rotation research across 48 industries.</dd>
+            <dt>Founder <span>2026 –</span></dt><dd>Liquid, a prepaid ordering app for local restaurants in College Park.</dd>
+          </dl>
+        </section>
+        <section>
+          <h3>Projects</h3>
+          <dl>
+            <dt>CarryBot <span>Nov 2026</span></dt><dd>Delta-neutral bitcoin funding-rate bot on Kalshi and Alpaca, with an event-sourced ledger that reconciles to the cent. Taken live with $50 to prove execution.</dd>
+            <dt>Strategy Iteration Harness <span>Aug 2026</span></dt><dd>Multi-strategy trading platform on Alpaca paper accounts. Python, FastAPI, SQLite, React.</dd>
+          </dl>
+        </section>
+        <section>
+          <h3>Before</h3>
+          <dl>
+            <dt>Program assistant <span>Summer 2026</span></dt><dd>Residential hardware and design program in San Jose for 25 high school students.</dd>
+            <dt>Startup engineer <span>2025</span></dt><dd>HealthSutra Analytics. Validation platform for AI health insights and a hospital patient portal.</dd>
+            <dt>Ball-bonding intern <span>2024</span></dt><dd>Kulicke &amp; Soffa.</dd>
+          </dl>
+        </section>
+        <section>
+          <h3>Education and music</h3>
+          <dl>
+            <dt>University of Maryland <span>2025 – 2029</span></dt><dd>B.S. Computer Science, machine learning track. Presidential Scholarship.</dd>
+            <dt>Violin</dt><dd>Hindustani classical and Western classical. Recitals on YouTube since 2020.</dd>
+          </dl>
+          <p class="notes-links"><a href="https://www.linkedin.com/in/pranav-puranik-umd" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/PranavThe" target="_blank" rel="noopener">GitHub</a><a href="https://www.youtube.com/@pranavpuranik3621" target="_blank" rel="noopener">YouTube</a></p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
